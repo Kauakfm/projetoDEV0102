@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DEV0102Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tabUsuario">
+          <Key>
+            <PropertyRef Name="codigo" />
+          </Key>
+          <Property Name="codigo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nome" Type="varchar" MaxLength="300" />
+          <Property Name="cep" Type="varchar" MaxLength="10" />
+          <Property Name="endereco" Type="varchar" MaxLength="300" Nullable="false" />
+          <Property Name="bairro" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="cidade" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="uf" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="email" Type="varchar" MaxLength="300" Nullable="false" />
+          <Property Name="senha" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="nomeFoto" Type="varchar" MaxLength="300" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tabXml">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="xmlvalue" Type="xml" />
+        </EntityType>
+        <EntityType Name="TB_VENDAS_NF">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Id_Importacao" Type="int" />
+          <Property Name="tipo" Type="nvarchar(max)" />
+          <Property Name="dtemissao" Type="nvarchar(max)" />
+          <Property Name="status" Type="nvarchar(max)" />
+          <Property Name="material" Type="nvarchar(max)" />
+          <Property Name="segmento" Type="nvarchar(max)" />
+          <Property Name="nf" Type="nvarchar(max)" />
+          <Property Name="nro_serie" Type="nvarchar(max)" />
+          <Property Name="nome_cliente" Type="nvarchar(max)" />
+          <Property Name="uf_cliente" Type="nvarchar(max)" />
+          <Property Name="filial_venda" Type="nvarchar(max)" />
+          <Property Name="flial_nota" Type="nvarchar(max)" />
+          <Property Name="modelo" Type="nvarchar(max)" />
+          <Property Name="grupo" Type="nvarchar(max)" />
+          <Property Name="segmento_cliente" Type="nvarchar(max)" />
+          <Property Name="vendedor" Type="nvarchar(max)" />
+          <Property Name="volume" Type="nvarchar(max)" />
+          <Property Name="preco_venda" Type="nvarchar(max)" />
+          <Property Name="tot_receita" Type="nvarchar(max)" />
+          <Property Name="icms" Type="nvarchar(max)" />
+          <Property Name="icms_presumido" Type="nvarchar(max)" />
+          <Property Name="difal" Type="nvarchar(max)" />
+          <Property Name="pis" Type="nvarchar(max)" />
+          <Property Name="cofins" Type="nvarchar(max)" />
+          <Property Name="tot_impostos" Type="nvarchar(max)" />
+          <Property Name="receita_liq" Type="nvarchar(max)" />
+          <Property Name="cmv" Type="nvarchar(max)" />
+          <Property Name="margem_bruta" Type="nvarchar(max)" />
+          <Property Name="perc_margem" Type="nvarchar(max)" />
+          <Property Name="DataCad" Type="datetime" />
+          <Property Name="leilaoId" Type="int" />
+          <Property Name="cidade_origem" Type="nvarchar(max)" />
+          <Property Name="uf_origem" Type="nvarchar(max)" />
+          <Property Name="cidade_destino" Type="nvarchar(max)" />
+          <Property Name="uf_destino" Type="nvarchar(max)" />
+          <Property Name="centro_resultado" Type="nvarchar(max)" />
+          <Property Name="tipo_frete" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityContainer Name="DEV0102ModelStoreContainer">
+          <EntitySet Name="tabUsuario" EntityType="Self.tabUsuario" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tabXml" EntityType="Self.tabXml" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_VENDAS_NF" EntityType="Self.TB_VENDAS_NF" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DEV0102Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tabUsuario">
+          <Key>
+            <PropertyRef Name="codigo" />
+          </Key>
+          <Property Name="codigo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="cep" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="endereco" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="bairro" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="cidade" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="uf" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="senha" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nomeFoto" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="DEV0102Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tabUsuario" EntityType="Self.tabUsuario" />
+          <EntitySet Name="tabXml" EntityType="DEV0102Model.tabXml" />
+          <EntitySet Name="TB_VENDAS_NF" EntityType="DEV0102Model.TB_VENDAS_NF" />
+        </EntityContainer>
+        <EntityType Name="tabXml">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="xmlvalue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TB_VENDAS_NF">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Id_Importacao" Type="Int32" />
+          <Property Name="tipo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="dtemissao" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="status" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="material" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="segmento" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="nf" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="nro_serie" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="nome_cliente" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="uf_cliente" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="filial_venda" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="flial_nota" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="modelo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="grupo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="segmento_cliente" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="vendedor" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="volume" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="preco_venda" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="tot_receita" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="icms" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="icms_presumido" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="difal" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="pis" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="cofins" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="tot_impostos" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="receita_liq" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="cmv" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="margem_bruta" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="perc_margem" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DataCad" Type="DateTime" Precision="3" />
+          <Property Name="leilaoId" Type="Int32" />
+          <Property Name="cidade_origem" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="uf_origem" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="cidade_destino" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="uf_destino" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="centro_resultado" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="tipo_frete" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DEV0102ModelStoreContainer" CdmEntityContainer="DEV0102Entities">
+          <EntitySetMapping Name="tabUsuario">
+            <EntityTypeMapping TypeName="DEV0102Model.tabUsuario">
+              <MappingFragment StoreEntitySet="tabUsuario">
+                <ScalarProperty Name="codigo" ColumnName="codigo" />
+                <ScalarProperty Name="nome" ColumnName="nome" />
+                <ScalarProperty Name="cep" ColumnName="cep" />
+                <ScalarProperty Name="endereco" ColumnName="endereco" />
+                <ScalarProperty Name="bairro" ColumnName="bairro" />
+                <ScalarProperty Name="cidade" ColumnName="cidade" />
+                <ScalarProperty Name="uf" ColumnName="uf" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="senha" ColumnName="senha" />
+                <ScalarProperty Name="nomeFoto" ColumnName="nomeFoto" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tabXml">
+            <EntityTypeMapping TypeName="DEV0102Model.tabXml">
+              <MappingFragment StoreEntitySet="tabXml">
+                <ScalarProperty Name="xmlvalue" ColumnName="xmlvalue" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_VENDAS_NF">
+            <EntityTypeMapping TypeName="DEV0102Model.TB_VENDAS_NF">
+              <MappingFragment StoreEntitySet="TB_VENDAS_NF">
+                <ScalarProperty Name="tipo_frete" ColumnName="tipo_frete" />
+                <ScalarProperty Name="centro_resultado" ColumnName="centro_resultado" />
+                <ScalarProperty Name="uf_destino" ColumnName="uf_destino" />
+                <ScalarProperty Name="cidade_destino" ColumnName="cidade_destino" />
+                <ScalarProperty Name="uf_origem" ColumnName="uf_origem" />
+                <ScalarProperty Name="cidade_origem" ColumnName="cidade_origem" />
+                <ScalarProperty Name="leilaoId" ColumnName="leilaoId" />
+                <ScalarProperty Name="DataCad" ColumnName="DataCad" />
+                <ScalarProperty Name="perc_margem" ColumnName="perc_margem" />
+                <ScalarProperty Name="margem_bruta" ColumnName="margem_bruta" />
+                <ScalarProperty Name="cmv" ColumnName="cmv" />
+                <ScalarProperty Name="receita_liq" ColumnName="receita_liq" />
+                <ScalarProperty Name="tot_impostos" ColumnName="tot_impostos" />
+                <ScalarProperty Name="cofins" ColumnName="cofins" />
+                <ScalarProperty Name="pis" ColumnName="pis" />
+                <ScalarProperty Name="difal" ColumnName="difal" />
+                <ScalarProperty Name="icms_presumido" ColumnName="icms_presumido" />
+                <ScalarProperty Name="icms" ColumnName="icms" />
+                <ScalarProperty Name="tot_receita" ColumnName="tot_receita" />
+                <ScalarProperty Name="preco_venda" ColumnName="preco_venda" />
+                <ScalarProperty Name="volume" ColumnName="volume" />
+                <ScalarProperty Name="vendedor" ColumnName="vendedor" />
+                <ScalarProperty Name="segmento_cliente" ColumnName="segmento_cliente" />
+                <ScalarProperty Name="grupo" ColumnName="grupo" />
+                <ScalarProperty Name="modelo" ColumnName="modelo" />
+                <ScalarProperty Name="flial_nota" ColumnName="flial_nota" />
+                <ScalarProperty Name="filial_venda" ColumnName="filial_venda" />
+                <ScalarProperty Name="uf_cliente" ColumnName="uf_cliente" />
+                <ScalarProperty Name="nome_cliente" ColumnName="nome_cliente" />
+                <ScalarProperty Name="nro_serie" ColumnName="nro_serie" />
+                <ScalarProperty Name="nf" ColumnName="nf" />
+                <ScalarProperty Name="segmento" ColumnName="segmento" />
+                <ScalarProperty Name="material" ColumnName="material" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="dtemissao" ColumnName="dtemissao" />
+                <ScalarProperty Name="tipo" ColumnName="tipo" />
+                <ScalarProperty Name="Id_Importacao" ColumnName="Id_Importacao" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="urn:ATMWebSvr" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="urn:ATMWebSvr" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="urn:ATMWebSvr">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="averbaCTeRequest">
+    <wsdl:part name="usuario" type="xsd:string" />
+    <wsdl:part name="senha" type="xsd:string" />
+    <wsdl:part name="codatm" type="xsd:string" />
+    <wsdl:part name="xmlCTe" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="averbaCTeResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="averbaCTe20Request">
+    <wsdl:part name="usuario" type="xsd:string" />
+    <wsdl:part name="senha" type="xsd:string" />
+    <wsdl:part name="codatm" type="xsd:string" />
+    <wsdl:part name="xmlCTe" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="averbaCTe20Response">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="averbaNFeRequest">
+    <wsdl:part name="usuario" type="xsd:string" />
+    <wsdl:part name="senha" type="xsd:string" />
+    <wsdl:part name="codatm" type="xsd:string" />
+    <wsdl:part name="xmlNFe" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="averbaNFeResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="averbaNFe20Request">
+    <wsdl:part name="usuario" type="xsd:string" />
+    <wsdl:part name="senha" type="xsd:string" />
+    <wsdl:part name="codatm" type="xsd:string" />
+    <wsdl:part name="xmlNFe" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="averbaNFe20Response">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="averbaATMRequest">
+    <wsdl:part name="usuario" type="xsd:string" />
+    <wsdl:part name="senha" type="xsd:string" />
+    <wsdl:part name="codatm" type="xsd:string" />
+    <wsdl:part name="Serie" type="xsd:string" />
+    <wsdl:part name="Numero" type="xsd:string" />
+    <wsdl:part name="UFOrigem" type="xsd:string" />
+    <wsdl:part name="UFDestino" type="xsd:string" />
+    <wsdl:part name="Urbano" type="xsd:string" />
+    <wsdl:part name="TipoMercadoria" type="xsd:string" />
+    <wsdl:part name="ValorMercadoria" type="xsd:string" />
+    <wsdl:part name="Placa" type="xsd:string" />
+    <wsdl:part name="CodigoLiberacao" type="xsd:string" />
+    <wsdl:part name="CPFMotorista" type="xsd:string" />
+    <wsdl:part name="CNPJEmissor" type="xsd:string" />
+    <wsdl:part name="OCD" type="xsd:string" />
+    <wsdl:part name="IC" type="xsd:string" />
+    <wsdl:part name="RI" type="xsd:string" />
+    <wsdl:part name="TranspProprio" type="xsd:string" />
+    <wsdl:part name="DataEmissao" type="xsd:string" />
+    <wsdl:part name="TipoDocto" type="xsd:string" />
+    <wsdl:part name="TipoTransporte" type="xsd:string" />
+    <wsdl:part name="TipoMovimento" type="xsd:string" />
+    <wsdl:part name="TaxaRCFDC" type="xsd:string" />
+    <wsdl:part name="PercursoComplementar" type="xsd:string" />
+    <wsdl:part name="PercursoComplementarTransporte" type="xsd:string" />
+    <wsdl:part name="PercursoComplementarUFOrigem" type="xsd:string" />
+    <wsdl:part name="PercursoComplementarUFDestino" type="xsd:string" />
+    <wsdl:part name="RGMotorista" type="xsd:string" />
+    <wsdl:part name="Ramo" type="xsd:string" />
+    <wsdl:part name="Filial" type="xsd:string" />
+    <wsdl:part name="Rastreado" type="xsd:string" />
+    <wsdl:part name="Escolta" type="xsd:string" />
+    <wsdl:part name="Observacoes" type="xsd:string" />
+    <wsdl:part name="ValorContainner" type="xsd:string" />
+    <wsdl:part name="ValorAcessorios" type="xsd:string" />
+    <wsdl:part name="MeiosProprios" type="xsd:string" />
+    <wsdl:part name="DataEmbarque" type="xsd:string" />
+    <wsdl:part name="ValorFrete" type="xsd:string" />
+    <wsdl:part name="ValorDespesas" type="xsd:string" />
+    <wsdl:part name="ValorImpostos" type="xsd:string" />
+    <wsdl:part name="ValorLucrosEsperados" type="xsd:string" />
+    <wsdl:part name="ValorAvarias" type="xsd:string" />
+    <wsdl:part name="CodigoDaMercadoria" type="xsd:string" />
+    <wsdl:part name="HoraEmbarque" type="xsd:string" />
+    <wsdl:part name="CEPOrigem" type="xsd:string" />
+    <wsdl:part name="CEPDestino" type="xsd:string" />
+    <wsdl:part name="CNPJDDR" type="xsd:string" />
+    <wsdl:part name="MercadoriaNova" type="xsd:string" />
+    <wsdl:part name="TipoDeViagem" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="averbaATMResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="listaErrosRequest">
+    <wsdl:part name="usuario" type="xsd:string" />
+    <wsdl:part name="senha" type="xsd:string" />
+    <wsdl:part name="codatm" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="listaErrosResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="AddBackMailRequest">
+    <wsdl:part name="usuario" type="xsd:string" />
+    <wsdl:part name="senha" type="xsd:string" />
+    <wsdl:part name="codatm" type="xsd:string" />
+    <wsdl:part name="aplicacao" type="xsd:string" />
+    <wsdl:part name="assunto" type="xsd:string" />
+    <wsdl:part name="remetentes" type="xsd:string" />
+    <wsdl:part name="destinatarios" type="xsd:string" />
+    <wsdl:part name="corpo" type="xsd:string" />
+    <wsdl:part name="chave" type="xsd:string" />
+    <wsdl:part name="chaveresp" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="AddBackMailResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:portType name="ATMWebSvrPortType">
+    <wsdl:operation name="averbaCTe">
+      <documentation>Interface de averbaÃ§Ã£o eletrÃ´nica AT&amp;M para CTe</documentation>
+      <wsdl:input message="tns:averbaCTeRequest" />
+      <wsdl:output message="tns:averbaCTeResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="averbaCTe20">
+      <documentation>Interface de averbaÃ§Ã£o eletrÃ´nica AT&amp;M para CTe. VersÃ£o do WebServer 2</documentation>
+      <wsdl:input message="tns:averbaCTe20Request" />
+      <wsdl:output message="tns:averbaCTe20Response" />
+    </wsdl:operation>
+    <wsdl:operation name="averbaNFe">
+      <documentation>Interface de averbaÃ§Ã£o eletrÃ´nica AT&amp;M para NFe</documentation>
+      <wsdl:input message="tns:averbaNFeRequest" />
+      <wsdl:output message="tns:averbaNFeResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="averbaNFe20">
+      <documentation>Interface de averbaÃ§Ã£o eletrÃ´nica AT&amp;M para NFe</documentation>
+      <wsdl:input message="tns:averbaNFe20Request" />
+      <wsdl:output message="tns:averbaNFe20Response" />
+    </wsdl:operation>
+    <wsdl:operation name="averbaATM">
+      <documentation>Interface de averbaÃ§Ã£o eletrÃ´nica AT&amp;M</documentation>
+      <wsdl:input message="tns:averbaATMRequest" />
+      <wsdl:output message="tns:averbaATMResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="listaErros">
+      <documentation>Lista de erros retornados pelo WebServer</documentation>
+      <wsdl:input message="tns:listaErrosRequest" />
+      <wsdl:output message="tns:listaErrosResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="AddBackMail">
+      <documentation>ServiÃ§o de envio de emails para aplicaÃ§Ãµes automatizadas</documentation>
+      <wsdl:input message="tns:AddBackMailRequest" />
+      <wsdl:output message="tns:AddBackMailResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ATMWebSvrBinding" type="tns:ATMWebSvrPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="averbaCTe">
+      <soap:operation soapAction="urn:ATMWebSvr#averbaCTe" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:ATMWebSvr" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:ATMWebSvr" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="averbaCTe20">
+      <soap:operation soapAction="urn:ATMWebSvr#averbaCTe20" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:ATMWebSvr" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:ATMWebSvr" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="averbaNFe">
+      <soap:operation soapAction="urn:ATMWebSvr#averbaNFe" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:ATMWebSvr" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:ATMWebSvr" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="averbaNFe20">
+      <soap:operation soapAction="urn:ATMWebSvr#averbaNFe20" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:ATMWebSvr" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:ATMWebSvr" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="averbaATM">
+      <soap:operation soapAction="urn:ATMWebSvr#averbaATM" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:ATMWebSvr" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:ATMWebSvr" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listaErros">
+      <soap:operation soapAction="urn:ATMWebSvr#listaErros" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:ATMWebSvr" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:ATMWebSvr" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddBackMail">
+      <soap:operation soapAction="urn:ATMWebSvr#AddBackMail" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:ATMWebSvr" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:ATMWebSvr" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ATMWebSvr">
+    <wsdl:port name="ATMWebSvrPort" binding="tns:ATMWebSvrBinding">
+      <soap:address location="http://webserver.averba.com.br/index.soap" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

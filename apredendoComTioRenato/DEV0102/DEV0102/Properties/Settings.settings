@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="DEV0102.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DEV0102_br_com_averba_webserver_ATMWebSvr" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://webserver.averba.com.br/index.soap</Value>
+    </Setting>
+    <Setting Name="DEV0102_wsCorreiros_AtendeClienteService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://apps.correios.com.br/SigepMasterJPA/AtendeClienteService/AtendeCliente</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

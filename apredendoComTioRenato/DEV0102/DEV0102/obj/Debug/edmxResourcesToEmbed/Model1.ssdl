@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DEV0102Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tabUsuario">
+    <Key>
+      <PropertyRef Name="codigo" />
+    </Key>
+    <Property Name="codigo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nome" Type="varchar" MaxLength="300" />
+    <Property Name="cep" Type="varchar" MaxLength="10" />
+    <Property Name="endereco" Type="varchar" MaxLength="300" Nullable="false" />
+    <Property Name="bairro" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="cidade" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="uf" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="300" Nullable="false" />
+    <Property Name="senha" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="nomeFoto" Type="varchar" MaxLength="300" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tabXml">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="xmlvalue" Type="xml" />
+  </EntityType>
+  <EntityType Name="TB_VENDAS_NF">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Id_Importacao" Type="int" />
+    <Property Name="tipo" Type="nvarchar(max)" />
+    <Property Name="dtemissao" Type="nvarchar(max)" />
+    <Property Name="status" Type="nvarchar(max)" />
+    <Property Name="material" Type="nvarchar(max)" />
+    <Property Name="segmento" Type="nvarchar(max)" />
+    <Property Name="nf" Type="nvarchar(max)" />
+    <Property Name="nro_serie" Type="nvarchar(max)" />
+    <Property Name="nome_cliente" Type="nvarchar(max)" />
+    <Property Name="uf_cliente" Type="nvarchar(max)" />
+    <Property Name="filial_venda" Type="nvarchar(max)" />
+    <Property Name="flial_nota" Type="nvarchar(max)" />
+    <Property Name="modelo" Type="nvarchar(max)" />
+    <Property Name="grupo" Type="nvarchar(max)" />
+    <Property Name="segmento_cliente" Type="nvarchar(max)" />
+    <Property Name="vendedor" Type="nvarchar(max)" />
+    <Property Name="volume" Type="nvarchar(max)" />
+    <Property Name="preco_venda" Type="nvarchar(max)" />
+    <Property Name="tot_receita" Type="nvarchar(max)" />
+    <Property Name="icms" Type="nvarchar(max)" />
+    <Property Name="icms_presumido" Type="nvarchar(max)" />
+    <Property Name="difal" Type="nvarchar(max)" />
+    <Property Name="pis" Type="nvarchar(max)" />
+    <Property Name="cofins" Type="nvarchar(max)" />
+    <Property Name="tot_impostos" Type="nvarchar(max)" />
+    <Property Name="receita_liq" Type="nvarchar(max)" />
+    <Property Name="cmv" Type="nvarchar(max)" />
+    <Property Name="margem_bruta" Type="nvarchar(max)" />
+    <Property Name="perc_margem" Type="nvarchar(max)" />
+    <Property Name="DataCad" Type="datetime" />
+    <Property Name="leilaoId" Type="int" />
+    <Property Name="cidade_origem" Type="nvarchar(max)" />
+    <Property Name="uf_origem" Type="nvarchar(max)" />
+    <Property Name="cidade_destino" Type="nvarchar(max)" />
+    <Property Name="uf_destino" Type="nvarchar(max)" />
+    <Property Name="centro_resultado" Type="nvarchar(max)" />
+    <Property Name="tipo_frete" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityContainer Name="DEV0102ModelStoreContainer">
+    <EntitySet Name="tabUsuario" EntityType="Self.tabUsuario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tabXml" EntityType="Self.tabXml" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_VENDAS_NF" EntityType="Self.TB_VENDAS_NF" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

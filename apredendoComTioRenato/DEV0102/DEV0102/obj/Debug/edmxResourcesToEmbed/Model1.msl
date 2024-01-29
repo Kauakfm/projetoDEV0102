@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DEV0102ModelStoreContainer" CdmEntityContainer="DEV0102Entities">
+    <EntitySetMapping Name="tabUsuario">
+      <EntityTypeMapping TypeName="DEV0102Model.tabUsuario">
+        <MappingFragment StoreEntitySet="tabUsuario">
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="cep" ColumnName="cep" />
+          <ScalarProperty Name="endereco" ColumnName="endereco" />
+          <ScalarProperty Name="bairro" ColumnName="bairro" />
+          <ScalarProperty Name="cidade" ColumnName="cidade" />
+          <ScalarProperty Name="uf" ColumnName="uf" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="senha" ColumnName="senha" />
+          <ScalarProperty Name="nomeFoto" ColumnName="nomeFoto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tabXml">
+      <EntityTypeMapping TypeName="DEV0102Model.tabXml">
+        <MappingFragment StoreEntitySet="tabXml">
+          <ScalarProperty Name="xmlvalue" ColumnName="xmlvalue" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_VENDAS_NF">
+      <EntityTypeMapping TypeName="DEV0102Model.TB_VENDAS_NF">
+        <MappingFragment StoreEntitySet="TB_VENDAS_NF">
+          <ScalarProperty Name="tipo_frete" ColumnName="tipo_frete" />
+          <ScalarProperty Name="centro_resultado" ColumnName="centro_resultado" />
+          <ScalarProperty Name="uf_destino" ColumnName="uf_destino" />
+          <ScalarProperty Name="cidade_destino" ColumnName="cidade_destino" />
+          <ScalarProperty Name="uf_origem" ColumnName="uf_origem" />
+          <ScalarProperty Name="cidade_origem" ColumnName="cidade_origem" />
+          <ScalarProperty Name="leilaoId" ColumnName="leilaoId" />
+          <ScalarProperty Name="DataCad" ColumnName="DataCad" />
+          <ScalarProperty Name="perc_margem" ColumnName="perc_margem" />
+          <ScalarProperty Name="margem_bruta" ColumnName="margem_bruta" />
+          <ScalarProperty Name="cmv" ColumnName="cmv" />
+          <ScalarProperty Name="receita_liq" ColumnName="receita_liq" />
+          <ScalarProperty Name="tot_impostos" ColumnName="tot_impostos" />
+          <ScalarProperty Name="cofins" ColumnName="cofins" />
+          <ScalarProperty Name="pis" ColumnName="pis" />
+          <ScalarProperty Name="difal" ColumnName="difal" />
+          <ScalarProperty Name="icms_presumido" ColumnName="icms_presumido" />
+          <ScalarProperty Name="icms" ColumnName="icms" />
+          <ScalarProperty Name="tot_receita" ColumnName="tot_receita" />
+          <ScalarProperty Name="preco_venda" ColumnName="preco_venda" />
+          <ScalarProperty Name="volume" ColumnName="volume" />
+          <ScalarProperty Name="vendedor" ColumnName="vendedor" />
+          <ScalarProperty Name="segmento_cliente" ColumnName="segmento_cliente" />
+          <ScalarProperty Name="grupo" ColumnName="grupo" />
+          <ScalarProperty Name="modelo" ColumnName="modelo" />
+          <ScalarProperty Name="flial_nota" ColumnName="flial_nota" />
+          <ScalarProperty Name="filial_venda" ColumnName="filial_venda" />
+          <ScalarProperty Name="uf_cliente" ColumnName="uf_cliente" />
+          <ScalarProperty Name="nome_cliente" ColumnName="nome_cliente" />
+          <ScalarProperty Name="nro_serie" ColumnName="nro_serie" />
+          <ScalarProperty Name="nf" ColumnName="nf" />
+          <ScalarProperty Name="segmento" ColumnName="segmento" />
+          <ScalarProperty Name="material" ColumnName="material" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="dtemissao" ColumnName="dtemissao" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+          <ScalarProperty Name="Id_Importacao" ColumnName="Id_Importacao" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

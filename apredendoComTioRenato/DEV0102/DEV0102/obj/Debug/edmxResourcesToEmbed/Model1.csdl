@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DEV0102Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tabUsuario">
+    <Key>
+      <PropertyRef Name="codigo" />
+    </Key>
+    <Property Name="codigo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nome" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="cep" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="endereco" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="bairro" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cidade" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="uf" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="senha" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nomeFoto" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="DEV0102Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tabUsuario" EntityType="Self.tabUsuario" />
+    <EntitySet Name="tabXml" EntityType="DEV0102Model.tabXml" />
+    <EntitySet Name="TB_VENDAS_NF" EntityType="DEV0102Model.TB_VENDAS_NF" />
+  </EntityContainer>
+  <EntityType Name="tabXml">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="xmlvalue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TB_VENDAS_NF">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Id_Importacao" Type="Int32" />
+    <Property Name="tipo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="dtemissao" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="status" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="material" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="segmento" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="nf" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="nro_serie" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="nome_cliente" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="uf_cliente" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="filial_venda" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="flial_nota" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="modelo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="grupo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="segmento_cliente" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="vendedor" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="volume" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="preco_venda" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="tot_receita" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="icms" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="icms_presumido" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="difal" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="pis" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="cofins" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="tot_impostos" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="receita_liq" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="cmv" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="margem_bruta" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="perc_margem" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DataCad" Type="DateTime" Precision="3" />
+    <Property Name="leilaoId" Type="Int32" />
+    <Property Name="cidade_origem" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="uf_origem" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="cidade_destino" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="uf_destino" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="centro_resultado" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="tipo_frete" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>
